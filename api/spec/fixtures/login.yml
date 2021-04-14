@@ -1,0 +1,36 @@
+#criando um arquivo yaml para exmportar 
+---
+- title: Senha invalida
+  payload:
+    email: teste@login.com
+    password: '131'
+  code: 401
+  error: Unauthorized
+- title: Emial não cadastrado
+  payload:
+    email: 404teste@login.com
+    password: '131'
+  code: 401
+  error: Unauthorized
+- title: Emial em branco
+  payload:
+    email: ''
+    password: '131'
+  code: 412
+  error: required email
+- title: Sem o campo e-mail
+  payload:
+    password: '131'
+  code: 412
+  error: required email
+- title: Senha em branco
+  payload:
+    email: teste@login.com
+    password: ''
+  code: 412
+  error: required password
+- title: Sem o campo senha
+  payload:
+    email: teste@login.com
+  code: 412
+  error: required password

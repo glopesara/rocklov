@@ -1,0 +1,21 @@
+# para fazer o report do cucumber na nuvem 
+#para iniciar um arquivo yml usar ---
+#para desligar o relatorio passar o parametro -quiet
+---
+#posso passar o padrão abreviado para ser reproduzido passsando -p e o padrão no default
+default: --publish-quiet -p allure -p bdd -p local -p chrome
+#para definir o formato progress como padrão usar - f pretty formato padrão 
+bdd: -f pretty
+#para definir o formato progress como padrão usar - f progress
+dots: -f progress
+#fazendo um relatiorio html o 'o' siginifica que preciso passar um diretorio para ser salvo o relatorio
+html: -f html -o logs/report.html
+#para definir o formato do allure de relatorios
+allure: --format AllureCucumber::CucumberFormatter --out=logs
+#criando profile que cria variavel de ambiente na execução 
+local: CONFIG=local.yml
+#criando variaveis para os browser
+firefox: BROWSER=firefox
+fire_headless: BROWSER=fire_headless
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless

@@ -1,0 +1,28 @@
+subir ambiente 
+Passos:
+
+1. Abrir o VirtualBox
+
+2. Clicar em Iniciar > Início Headless
+
+3. Abrir o PuTTY
+
+4. Clicar em RockLov
+
+5. Clicar em Open
+
+6. Fazer o login com usuário "qaninja" e senha "qaninja"
+
+7. Digitar o comando "cd rocklov-dc"
+
+8. Digitar o comando "docker-compose up -d" (coloca o ambiente no ar novamente)
+
+docker-compose up --force-recreate rocklov-web && docker-compose up --force-recreate rocklov-api && docker-compose up --force-recreate rocklov-db
+
+9. Acessar o ambiente da RockLov http://rocklov-web:3000/
+
+alternativa
+cd rocklov-dc (para entrar no docker)
+   cd r2 (para entrar na versão mais nova)
+        docker-compose down
+        docker-compose up -d
